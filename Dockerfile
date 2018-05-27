@@ -9,7 +9,7 @@ ENV LOCALES_DEF en_AU.UTF-8 en_US.UTF-8
 RUN apt-get update &&  \
     apt-get upgrade -y &&  \
     DEBIAN_FRONTEND=noninteractive  \
-    apt-get -o Dpkg::Options::='--force-confnew' install locales -y
+    apt-get -o Dpkg::Options::='--force-confnew' install locales gnupg -y
     
 RUN set -- junk $LOCALES_DEF  \
     shift;  \
